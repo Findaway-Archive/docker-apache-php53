@@ -13,7 +13,7 @@ RUN apt-get update && \
       php5-mysql \
     && rm -r /var/lib/apt/lists/*
 
-OPY apache_default /etc/apache2/sites-available/default
+COPY apache_default /etc/apache2/sites-available/default
 COPY apache2_foreground /usr/local/bin/
 RUN a2enmod rewrite
 
